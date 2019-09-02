@@ -1,17 +1,16 @@
 {
     "parameters": {
         "serviceGroup": "Backend",
-        "devOpsProject": "AzurePoc",
         "tags": {
             "ProjectCode": 90210,
             "CostCenter": null,
-            "Team": "Franx"
+            "Team": "DevopsTeam"
         }
     },
     "services": [
         {
-            "name": "Identity Provider",
-            "shortName": "idsvr",
+            "name": "Application 1",
+            "shortName": "app1",
             "roles": {},
             "resourceGroup": {
                 "tags": {},
@@ -19,8 +18,8 @@
             }
         },
         {
-            "name": "Rates API",
-            "shortName": "rates",
+            "name": "Application 2",
+            "shortName": "app2",
             "roles": {},
             "resourceGroup": {
                 "tags": {},

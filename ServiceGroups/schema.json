@@ -101,7 +101,7 @@
             "title": "The Application Name",
             "default": "",
             "examples": [
-              "Identity Provider"
+              "Aplication 1"
             ],
             "pattern": "^(.*)$"
           },
@@ -111,7 +111,7 @@
             "title": "The Shortname of the application",
             "default": "",
             "examples": [
-              "idsvr"
+              "app1"
             ],
             "pattern": "^(.*)$"
           },
