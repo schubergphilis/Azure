@@ -13,8 +13,14 @@ steps:
     versionSpec: "10.x"
   displayName: Install node 10
 
-- script: npm install
-  displayName: npm install
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: 'ServiceGroups'
 
-- script: npm run test
-  displayName: npm run test
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: 'ServiceGroups'
+    customCommand: 'run test'
+    
