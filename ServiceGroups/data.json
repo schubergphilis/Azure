@@ -1,0 +1,40 @@
+{
+    "parameters": {
+        "serviceGroup": "Backend",
+        "devOpsProject": "AzurePoc",
+        "tags": {
+            "ProjectCode": 90210,
+            "CostCenter": null,
+            "Team": "Franx"
+        }
+    },
+    "services": [
+        {
+            "name": "Identity Provider",
+            "shortName": "idsvr",
+            "roles": {},
+            "resourceGroup": {
+                "tags": {},
+                "sequence": 1
+            }
+        },
+        {
+            "name": "Rates API",
+            "shortName": "rates",
+            "roles": {},
+            "resourceGroup": {
+                "tags": {},
+                "sequence": 1
+            }
+        },
+        {
+            "name": "Logging",
+            "shortName": "log",
+            "roles": {},
+            "resourceGroup": {
+                "tags": {},
+                "sequence": 1
+            }
+        }
+    ]
+}

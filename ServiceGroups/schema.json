@@ -1,0 +1,152 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "required": [
+    "parameters",
+    "services"
+  ],
+  "properties": {
+    "parameters": {
+      "$id": "#/properties/parameters",
+      "type": "object",
+      "required": [
+        "serviceGroup",
+        "tags"
+      ],
+      "properties": {
+        "serviceGroup": {
+          "$id": "#/properties/parameters/properties/serviceGroup",
+          "type": "string",
+          "title": "The Servicegroup Name",
+          "default": "",
+          "enum": [
+            "Backend",
+            "Frontend",
+            "Hub",
+            "Spoke",
+            "Management"
+          ],
+          "examples": [
+            "Backend"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "tags": {
+          "$id": "#/properties/parameters/properties/tags",
+          "type": "object",
+          "title": "The Tags",
+          "required": [
+            "ProjectCode",
+            "CostCenter",
+            "Team"
+          ],
+          "properties": {
+            "ProjectCode": {
+              "$id": "#/properties/parameters/properties/tags/properties/ProjectCode",
+              "type": [
+                "integer",
+                "null"
+              ],
+              "title": "The Projectcode",
+              "default": 0,
+              "examples": [
+                90210
+              ]
+            },
+            "CostCenter": {
+              "$id": "#/properties/parameters/properties/tags/properties/CostCenter",
+              "type": [
+                "integer",
+                "null"
+              ],
+              "title": "The Costcenter Schema",
+              "default": null,
+              "examples": [
+                null
+              ]
+            },
+            "Team": {
+              "$id": "#/properties/parameters/properties/tags/properties/Team",
+              "type": "string",
+              "title": "The Team",
+              "default": "",
+              "examples": [
+                "DevopsTeam"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    },
+    "services": {
+      "$id": "#/properties/services",
+      "type": "array",
+      "title": "The Services Schema",
+      "items": {
+        "$id": "#/properties/services/items",
+        "type": "object",
+        "required": [
+          "name",
+          "shortName",
+          "roles",
+          "resourceGroup"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/properties/services/items/properties/name",
+            "type": "string",
+            "title": "The Application Name",
+            "default": "",
+            "examples": [
+              "Identity Provider"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "shortName": {
+            "$id": "#/properties/services/items/properties/shortName",
+            "type": "string",
+            "title": "The Shortname of the application",
+            "default": "",
+            "examples": [
+              "idsvr"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "roles": {
+            "$id": "#/properties/services/items/properties/roles",
+            "type": "object",
+            "title": "The Roles"
+          },
+          "resourceGroup": {
+            "$id": "#/properties/services/items/properties/resourceGroup",
+            "type": "object",
+            "title": "The Resourcegroup",
+            "required": [
+              "tags",
+              "sequence"
+            ],
+            "properties": {
+              "tags": {
+                "$id": "#/properties/services/items/properties/resourceGroup/properties/tags",
+                "type": "object",
+                "title": "The Tags"
+              },
+              "sequence": {
+                "$id": "#/properties/services/items/properties/resourceGroup/properties/sequence",
+                "type": "integer",
+                "title": "The Sequence",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

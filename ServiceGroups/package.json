@@ -1,0 +1,23 @@
+{
+  "name": "servicegroups",
+  "version": "1.0.0",
+  "description": "Azure",
+  "main": "validate.js",
+  "dependencies": {
+    "ajv": "^6.10.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node validate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schubergphilis/Azure.git"
+  },
+  "author": "Schubergphilis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schubergphilis/Azure/issues"
+  },
+  "homepage": "https://github.com/schubergphilis/Azure#readme"
+}
