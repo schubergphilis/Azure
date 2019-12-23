@@ -1,6 +1,6 @@
 {
   "definitions": {},
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "http://example.com/root.json",
   "type": "object",
   "required": [
@@ -19,13 +19,11 @@
         "serviceGroup": {
           "$id": "#/properties/parameters/properties/serviceGroup",
           "type": "string",
-          "title": "The Servicegroup Name",
+          "title": "The service group name",
           "default": "",
           "enum": [
             "Backend",
             "Frontend",
-            "Hub",
-            "Spoke",
             "Management"
           ],
           "examples": [
@@ -38,44 +36,27 @@
           "type": "object",
           "title": "The Tags",
           "required": [
-            "ProjectCode",
-            "CostCenter",
-            "Team"
+            "ServiceGroup",
+            "CostCenter"
           ],
           "properties": {
-            "ProjectCode": {
-              "$id": "#/properties/parameters/properties/tags/properties/ProjectCode",
-              "type": [
-                "integer",
-                "null"
-              ],
-              "title": "The Projectcode",
-              "default": 0,
+            "ServiceGroup": {
+              "$id": "#/properties/parameters/properties/tags/properties/Service Group",
+              "type": "string",
+              "title": "The service group name",
+              "default": null,
               "examples": [
-                90210
+                "Management"
               ]
             },
             "CostCenter": {
-              "$id": "#/properties/parameters/properties/tags/properties/CostCenter",
-              "type": [
-                "integer",
-                "null"
-              ],
-              "title": "The Costcenter Schema",
+              "$id": "#/properties/parameters/properties/tags/properties/Cost Center",
+              "type": "string",
+              "title": "The cost center indicator",
               "default": null,
               "examples": [
-                null
+                "Front Office"
               ]
-            },
-            "Team": {
-              "$id": "#/properties/parameters/properties/tags/properties/Team",
-              "type": "string",
-              "title": "The Team",
-              "default": "",
-              "examples": [
-                "DevopsTeam"
-              ],
-              "pattern": "^(.*)$"
             }
           }
         }
@@ -101,7 +82,7 @@
             "title": "The Application Name",
             "default": "",
             "examples": [
-              "Aplication 1"
+              "Identity Provider"
             ],
             "pattern": "^(.*)$"
           },
@@ -111,7 +92,7 @@
             "title": "The Shortname of the application",
             "default": "",
             "examples": [
-              "app1"
+              "idsvr"
             ],
             "pattern": "^(.*)$"
           },

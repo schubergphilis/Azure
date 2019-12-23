@@ -1,39 +1,25 @@
 {
-    "parameters": {
-        "serviceGroup": "Backend",
-        "tags": {
-            "ProjectCode": 90210,
-            "CostCenter": null,
-            "Team": "DevopsTeam"
-        }
-    },
-    "services": [
-        {
-            "name": "Application 1",
-            "shortName": "app1",
-            "roles": {},
-            "resourceGroup": {
-                "tags": {},
-                "sequence": 1
-            }
-        },
-        {
-            "name": "Application 2",
-            "shortName": "app2",
-            "roles": {},
-            "resourceGroup": {
-                "tags": {},
-                "sequence": 1
-            }
-        },
-        {
-            "name": "Logging",
-            "shortName": "log",
-            "roles": {},
-            "resourceGroup": {
-                "tags": {},
-                "sequence": 1
-            }
-        }
-    ]
+  "parameters": {
+      "serviceGroup": "Management",
+      "roles": [
+          "Contributor",
+          "Reader"
+      ],
+      "tags": {
+          "ProjectCode": 90210,
+          "CostCenter": null,
+          "Team": "AzureSwatTeam"
+      }
+  },
+  "services": [
+      {
+          "name": "ShowApp",
+          "shortName": "show",
+          "roles": {},
+          "resourceGroup": {
+              "tags": {},
+              "sequence": 0
+          }
+      }
+  ]
 }
