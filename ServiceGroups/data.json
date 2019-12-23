@@ -7,8 +7,8 @@
       ],
       "tags": {
           "ProjectCode": 90210,
-          "CostCenter": null,
-          "Team": "AzureSwatTeam"
+          "CostCenter": "DevTeam",
+          "ServiceGroup": "Frontend"
       }
   },
   "services": [

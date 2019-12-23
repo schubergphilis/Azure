@@ -1,6 +1,5 @@
 {
   "definitions": {},
-  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "http://example.com/root.json",
   "type": "object",
   "required": [
@@ -41,19 +40,17 @@
           ],
           "properties": {
             "ServiceGroup": {
-              "$id": "#/properties/parameters/properties/tags/properties/Service Group",
+              "$id": "#/properties/parameters/properties/tags/properties/ServiceGroup",
               "type": "string",
               "title": "The service group name",
-              "default": null,
               "examples": [
                 "Management"
               ]
             },
             "CostCenter": {
-              "$id": "#/properties/parameters/properties/tags/properties/Cost Center",
+              "$id": "#/properties/parameters/properties/tags/properties/CostCenter",
               "type": "string",
               "title": "The cost center indicator",
-              "default": null,
               "examples": [
                 "Front Office"
               ]
