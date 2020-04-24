@@ -23,7 +23,8 @@
           "enum": [
             "Backend",
             "Frontend",
-            "Management"
+            "Management",
+            "Internet"
           ],
           "examples": [
             "Backend"
