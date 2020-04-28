@@ -20,11 +20,6 @@
           "type": "string",
           "title": "The service group name",
           "default": "",
-          "enum": [
-            "Backend",
-            "Frontend",
-            "Management"
-          ],
           "examples": [
             "Backend"
           ],
